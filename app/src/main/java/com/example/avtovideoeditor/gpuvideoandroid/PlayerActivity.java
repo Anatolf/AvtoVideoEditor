@@ -12,7 +12,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 
 import com.daasuu.gpuv.egl.filter.GlFilter;
 import com.daasuu.gpuv.player.GPUPlayerView;
@@ -31,6 +31,7 @@ import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.util.Util;
 
 import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class PlayerActivity extends AppCompatActivity {
 

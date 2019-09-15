@@ -3,30 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.avtovideoeditor">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
-    <!-- Camera permissions -->
-    <uses-feature android:name="android.hardware.camera" />
-    <uses-feature android:name="android.hardware.camera.autofocus" />
-
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
-
-        android:name="com.example.avtovideoeditor.china_video_trimmer.ZApplication"
-        android:allowBackup="false"
+        android:name="com.iknow.android.ZApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
+        android:roundIcon="@drawable/ic_launcher"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,17 +21,17 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.avtovideoeditor.MultipleCommandsExampleActivity"
+        <activity
+            android:name="com.example.avtovideoeditor.MultipleCommandsExampleActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:windowSoftInputMode="stateHidden"
-            android:label="Multiple commands">
-        </activity>
+            android:label="Multiple commands"
+            android:windowSoftInputMode="stateHidden"></activity>
 
-        <activity android:name="com.example.avtovideoeditor.BPMCounterActivity"
+        <activity
+            android:name="com.example.avtovideoeditor.BPMCounterActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:windowSoftInputMode="stateHidden"
-            android:label="Multiple commands">
-        </activity>
+            android:label="Multiple commands"
+            android:windowSoftInputMode="stateHidden"></activity>
 
         <activity
             android:name="com.example.avtovideoeditor.gpuvideoandroid.PlayerActivity"
@@ -71,19 +58,31 @@
             android:screenOrientation="portrait" />
 
 
-        <activity android:name="com.example.avtovideoeditor.china_video_trimmer.features.trim.VideoTrimmerActivity"
+        <activity android:name="com.iknow.android.features.trim.VideoTrimmerActivity"
             android:screenOrientation="portrait"/>
 
-        <activity android:name="com.example.avtovideoeditor.china_video_trimmer.features.record.VideoRecordActivity"
+        <activity android:name="com.iknow.android.features.record.VideoRecordActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name="com.example.avtovideoeditor.china_video_trimmer.features.select.VideoSelectActivity"
+            android:name="com.iknow.android.features.select.VideoSelectActivity"
             android:screenOrientation="portrait">
 
         </activity>
 
     </application>
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- Camera permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 
 </manifest>

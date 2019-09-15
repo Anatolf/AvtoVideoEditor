@@ -15,8 +15,8 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.avtovideoeditor.china_video_trimmer.features.select.VideoSelectActivity;
 import com.example.avtovideoeditor.gpuvideoandroid.GpuActivity;
+import com.iknow.android.features.select.VideoSelectActivity;
 
 
 public class MainActivity extends Activity {
@@ -35,7 +35,12 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+
+        startActivity(new Intent(this, VideoSelectActivity.class));
+        finish();
+
+        /*setContentView(R.layout.activity_main);
 
         testButton = findViewById(R.id.testBtn);
 
@@ -73,7 +78,7 @@ public class MainActivity extends Activity {
             public void surfaceDestroyed(SurfaceHolder holder) {
                 // do nothing
             }
-        });
+        });*/
     }
 
     @Override

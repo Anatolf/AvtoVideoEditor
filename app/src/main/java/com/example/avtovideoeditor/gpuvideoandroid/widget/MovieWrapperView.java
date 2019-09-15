@@ -4,24 +4,24 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
-import androidx.annotation.AttrRes;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+
+
+
 
 /**
  * Aspect 16 : 9 of View
  */
 public class MovieWrapperView extends FrameLayout {
 
-    public MovieWrapperView(@NonNull Context context) {
+    public MovieWrapperView(Context context) {
         super(context);
     }
 
-    public MovieWrapperView(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public MovieWrapperView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public MovieWrapperView(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
+    public MovieWrapperView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 

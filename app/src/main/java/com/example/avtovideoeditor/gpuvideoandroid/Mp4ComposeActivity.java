@@ -2,6 +2,7 @@ package com.example.avtovideoeditor.gpuvideoandroid;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -21,8 +22,8 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+//import androidx.appcompat.app.AlertDialog;
+
 
 import com.daasuu.gpuv.composer.FillMode;
 import com.daasuu.gpuv.composer.GPUMp4Composer;
@@ -40,6 +41,7 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Mp4ComposeActivity extends AppCompatActivity {
 

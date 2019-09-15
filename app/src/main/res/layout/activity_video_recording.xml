@@ -42,7 +42,7 @@
       android:orientation="vertical"
       >
 
-    <com.example.avtovideoeditor.china_video_trimmer.features.record.view.PreviewSurfaceView
+    <com.iknow.android.features.record.view.PreviewSurfaceView
         android:id="@+id/glView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

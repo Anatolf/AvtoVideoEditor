@@ -8,7 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
+
 
 import com.bumptech.glide.Glide;
 import com.example.avtovideoeditor.R;
@@ -24,7 +24,6 @@ public class VideoListAdapter extends ArrayAdapter<VideoItem> {
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         VideoItem data = getItem(position);
