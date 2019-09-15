@@ -24,7 +24,6 @@ public class VideoListAdapter extends ArrayAdapter<VideoItem> {
         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         VideoItem data = getItem(position);

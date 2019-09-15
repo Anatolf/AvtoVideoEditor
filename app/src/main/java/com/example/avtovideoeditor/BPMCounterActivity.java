@@ -1,10 +1,11 @@
 package com.example.avtovideoeditor;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayDeque;
 import java.util.Arrays;

@@ -15,7 +15,7 @@
       android:gravity="center"
       >
 
-    <com.example.avtovideoeditor.china_video_trimmer.widget.ZVideoView
+    <com.iknow.android.widget.ZVideoView
         android:id="@+id/video_loader"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -51,7 +51,7 @@
         android:layout_below="@+id/video_shoot_tip"
         >
 
-      <android.support.v7.widget.RecyclerView
+      <androidx.recyclerview.widget.RecyclerView
           android:id="@+id/video_frames_recyclerView"
           android:layout_width="match_parent"
           android:layout_height="50dp"
