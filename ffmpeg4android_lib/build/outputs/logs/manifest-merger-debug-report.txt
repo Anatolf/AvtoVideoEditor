@@ -1,41 +1,41 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
+ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:1-12:12
 	package
-		ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:3:7-45
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:3:7-45
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
 	android:versionName
-		ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:5:7-39
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:5:7-39
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:4:7-36
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:4:7-36
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:7:5-80
+ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:7:5-80
 	android:name
-		ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:7:22-78
+		ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml:7:22-78
 uses-sdk
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-		ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-		ADDED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
-		INJECTED from /Users/raqetaa/StudioProjects/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		ADDED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/FILES/TutorialsStartAndroid/AvtoVideoEditor/ffmpeg4android_lib/src/main/AndroidManifest.xml
