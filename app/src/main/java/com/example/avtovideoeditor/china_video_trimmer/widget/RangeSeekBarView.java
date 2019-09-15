@@ -17,7 +17,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
 
-import androidx.annotation.Nullable;
+
 
 import com.example.avtovideoeditor.china_video_trimmer.features.trim.VideoTrimmerUtil;
 import com.example.avtovideoeditor.R;
@@ -76,11 +76,11 @@ public class RangeSeekBarView extends View {
     super(context);
   }
 
-  public RangeSeekBarView(Context context, @Nullable AttributeSet attrs) {
+  public RangeSeekBarView(Context context, AttributeSet attrs) {
     super(context, attrs);
   }
 
-  public RangeSeekBarView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  public RangeSeekBarView(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
   }
 

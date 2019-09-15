@@ -3,13 +3,15 @@ package com.example.avtovideoeditor.china_video_trimmer.features.trim;
 import android.app.ProgressDialog;
 import android.content.Intent;
 //import android.databinding.DataBindingUtil;
-import androidx.databinding.DataBindingUtil;
-
-import androidx.fragment.app.FragmentActivity;
+//import androidx.databinding.DataBindingUtil;
+//
+//import androidx.fragment.app.FragmentActivity;
 //import android.support.v4.app.FragmentActivity;
 
+import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
 
 import com.example.avtovideoeditor.R;

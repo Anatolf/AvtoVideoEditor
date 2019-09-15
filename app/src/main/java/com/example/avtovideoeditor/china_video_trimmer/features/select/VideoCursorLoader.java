@@ -4,6 +4,10 @@ import android.content.Context;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 //import android.support.annotation.NonNull;
 //import android.support.annotation.Nullable;
 //import android.support.v4.app.FragmentActivity;
@@ -11,12 +15,12 @@ import android.provider.MediaStore;
 //import android.support.v4.content.CursorLoader;
 //import android.support.v4.content.Loader;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.FragmentActivity;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.CursorLoader;
-import androidx.loader.content.Loader;
+
+
+//import androidx.fragment.app.FragmentActivity;
+//import androidx.loader.app.LoaderManager;
+//import androidx.loader.content.CursorLoader;
+//import androidx.loader.content.Loader;
 
 import iknow.android.utils.callback.SimpleCallback;
 
@@ -38,8 +42,8 @@ public class VideoCursorLoader implements LoaderManager.LoaderCallbacks<Cursor>,
     ((FragmentActivity)context).getSupportLoaderManager().initLoader(1, null, this);
   }
 
-  @NonNull
-  @Override public Loader<Cursor> onCreateLoader(int id, @Nullable Bundle args) {
+
+  @Override public Loader<Cursor> onCreateLoader(int id, Bundle args) {
     return new CursorLoader(
         mContext,
         MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
@@ -50,13 +54,13 @@ public class VideoCursorLoader implements LoaderManager.LoaderCallbacks<Cursor>,
     );
   }
 
-  @Override public void onLoadFinished(@NonNull Loader<Cursor> loader, Cursor cursor) {
+  @Override public void onLoadFinished(Loader<Cursor> loader, Cursor cursor) {
     if (mSimpleCallback != null && cursor != null) {
       mSimpleCallback.success(cursor);
     }
   }
 
-  @Override public void onLoaderReset(@NonNull Loader<Cursor> loader) {
+  @Override public void onLoaderReset(Loader<Cursor> loader) {
 
   }
 }

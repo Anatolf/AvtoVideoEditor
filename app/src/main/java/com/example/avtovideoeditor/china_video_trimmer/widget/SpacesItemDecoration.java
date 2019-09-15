@@ -2,9 +2,10 @@ package com.example.avtovideoeditor.china_video_trimmer.widget;
 
 import android.graphics.Rect;
 //import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
-import androidx.recyclerview.widget.RecyclerView;
+//import androidx.recyclerview.widget.RecyclerView;
 
 /**
  * Author: Jason.Chou

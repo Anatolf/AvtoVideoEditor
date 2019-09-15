@@ -2,11 +2,12 @@ package com.example.avtovideoeditor.china_video_trimmer.features.common.ui;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 //import android.support.annotation.Nullable;
 //import android.support.v7.app.AppCompatActivity;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
+
+
 
 /**
  * author : J.Chou
@@ -23,7 +24,7 @@ public abstract class BaseActivity extends AppCompatActivity {
   protected void loadData() {
   }
 
-  @Override protected void onCreate(@Nullable Bundle savedInstanceState) {
+  @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     try {
       render();

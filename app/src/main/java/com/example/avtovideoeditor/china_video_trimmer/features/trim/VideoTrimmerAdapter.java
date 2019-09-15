@@ -4,14 +4,15 @@ import android.content.Context;
 import android.graphics.Bitmap;
 //import android.support.annotation.NonNull;
 //import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+
+
 
 import com.example.avtovideoeditor.R;
 //import com.iknow.android.R;
@@ -36,12 +37,11 @@ public class VideoTrimmerAdapter extends RecyclerView.Adapter {
     this.mInflater = LayoutInflater.from(context);
   }
 
-  @NonNull
-  @Override public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+  @Override public RecyclerView.ViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
     return new TrimmerViewHolder(mInflater.inflate(R.layout.video_thumb_item_layout, parent, false));
   }
 
-  @Override public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+  @Override public void onBindViewHolder( RecyclerView.ViewHolder holder, int position) {
     ((TrimmerViewHolder) holder).thumbImageView.setImageBitmap(mBitmaps.get(position));
   }
 

@@ -3,10 +3,10 @@ package com.example.avtovideoeditor.china_video_trimmer.features.select;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.database.Cursor;
-//import android.databinding.DataBindingUtil;
+import android.databinding.DataBindingUtil;
 import android.view.View;
 
-import androidx.databinding.DataBindingUtil;
+//import androidx.databinding.DataBindingUtil;
 
 import com.example.avtovideoeditor.china_video_trimmer.features.common.ui.BaseActivity;
 import com.example.avtovideoeditor.china_video_trimmer.features.record.VideoRecordActivity;

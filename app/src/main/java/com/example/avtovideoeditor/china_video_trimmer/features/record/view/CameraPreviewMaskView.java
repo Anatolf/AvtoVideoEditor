@@ -7,7 +7,7 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.view.View;
 
-import androidx.annotation.Nullable;
+
 
 /**
  * author : J.Chou
@@ -23,12 +23,12 @@ public class CameraPreviewMaskView extends View {
     init();
   }
 
-  public CameraPreviewMaskView(Context context, @Nullable AttributeSet attrs) {
+  public CameraPreviewMaskView(Context context, AttributeSet attrs) {
     super(context, attrs);
     init();
   }
 
-  public CameraPreviewMaskView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+  public CameraPreviewMaskView(Context context, AttributeSet attrs, int defStyleAttr) {
     super(context, attrs, defStyleAttr);
     init();
   }

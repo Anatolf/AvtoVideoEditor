@@ -9,6 +9,9 @@ import android.widget.RelativeLayout;
 
 import iknow.android.utils.DeviceUtil;
 
+//import iknow.android.utils.DeviceUtil;
+
+
 /**
  * author : J.Chou
  * e-mail : who_know_me@163.com
