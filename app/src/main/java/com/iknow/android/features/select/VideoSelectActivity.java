@@ -50,7 +50,7 @@ public class VideoSelectActivity extends AppCompatActivity implements View.OnCli
         videoGridview = findViewById(R.id.video_gridview);
         cameraPreviewLy = findViewById(R.id.cameraPreviewLy);
         openCameraPermissionLy = findViewById(R.id.openCameraPermissionLy);
-        cameraPreviewLy = findViewById(R.id.cameraPreviewLy);
+      //  cameraPreviewLy = findViewById(R.id.cameraPreviewLy);
         mOpenCameraPermission = findViewById(R.id.mOpenCameraPermission);
 
         mBtnBack.setOnClickListener(this);

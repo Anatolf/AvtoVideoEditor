@@ -51,16 +51,16 @@ public class VideoTrimmerView extends FrameLayout implements IVideoTrimmerView {
   private ZVideoView mVideoView;
   private ImageView mPlayView;
   private RecyclerView mVideoThumbRecyclerView;
-  private RangeSeekBarView mRangeSeekBarView;
+  private RangeSeekBarView mRangeSeekBarView;  // диапозон
   private LinearLayout mSeekBarLayout;
   private ImageView mRedProgressIcon;
   private TextView mVideoShootTipTv;
-  private float mAverageMsPx;//每毫秒所占的px
-  private float averagePxMs;//每px所占用的ms毫秒
+  private float mAverageMsPx;//每毫秒所占的px  //  Px за миллисекунду
+  private float averagePxMs;//每px所占用的ms毫秒 // Миллисекунды на пиксель
   private Uri mSourceUri;
   private VideoTrimListener mOnTrimVideoListener;
   private int mDuration = 0;
-  private VideoTrimmerAdapter mVideoThumbAdapter;
+  private VideoTrimmerAdapter mVideoThumbAdapter;  // миниатюра
   private boolean isFromRestore = false;
   //new
   private long mLeftProgressPos, mRightProgressPos;
@@ -250,7 +250,7 @@ public class VideoTrimmerView extends FrameLayout implements IVideoTrimmerView {
 
   private void onSaveClicked() {
     if (mRightProgressPos - mLeftProgressPos < VideoTrimmerUtil.MIN_SHOOT_DURATION) {
-      Toast.makeText(mContext, "视频长不足3秒,无法上传", Toast.LENGTH_SHORT).show();
+      Toast.makeText(mContext, "Видео меньше 3 секунд, его нельзя загрузить.", Toast.LENGTH_SHORT).show();
     } else {
       mVideoView.pause();
       VideoTrimmerUtil.trim(mContext,
@@ -319,13 +319,13 @@ public class VideoTrimmerView extends FrameLayout implements IVideoTrimmerView {
       super.onScrolled(recyclerView, dx, dy);
       isSeeking = false;
       int scrollX = calcScrollXDistance();
-      //达不到滑动的距离
+      //达不到滑动的距离  // Не могу достичь скользящего расстояния
       if (Math.abs(lastScrollX - scrollX) < mScaledTouchSlop) {
         isOverScaledTouchSlop = false;
         return;
       }
       isOverScaledTouchSlop = true;
-      //初始状态,why ? 因为默认的时候有35dp的空白！
+      //初始状态,why ? 因为默认的时候有35dp的空白！ // Исходное состояние, почему? Потому что по умолчанию есть 35dp пробел!
       if (scrollX == -VideoTrimmerUtil.RECYCLER_VIEW_PADDING) {
         scrollPos = 0;
       } else {
@@ -349,7 +349,7 @@ public class VideoTrimmerView extends FrameLayout implements IVideoTrimmerView {
   };
 
   /**
-   * 水平滑动了多少px
+   * 水平滑动了多少px  // Сколько пикселей по горизонтали
    */
   private int calcScrollXDistance() {
     LinearLayoutManager layoutManager = (LinearLayoutManager) mVideoThumbRecyclerView.getLayoutManager();

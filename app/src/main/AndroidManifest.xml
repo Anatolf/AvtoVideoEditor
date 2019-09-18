@@ -25,13 +25,15 @@
             android:name="com.example.avtovideoeditor.MultipleCommandsExampleActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="Multiple commands"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden">
+        </activity>
 
         <activity
             android:name="com.example.avtovideoeditor.BPMCounterActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
             android:label="Multiple commands"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden">
+        </activity>
 
         <activity
             android:name="com.example.avtovideoeditor.gpuvideoandroid.PlayerActivity"

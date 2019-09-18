@@ -55,11 +55,11 @@ public class PreviewSurfaceView extends SurfaceView implements SurfaceHolder.Cal
 
   @Override
   public void surfaceCreated(SurfaceHolder holder) {
-    try {
-      startCamera(holder);
-    } catch (IOException e) {
-      e.printStackTrace();
-    }
+//    try {
+//      startCamera(holder);
+//    } catch (IOException e) {
+//      e.printStackTrace();
+//    }
   }
 
   @Override
@@ -89,8 +89,8 @@ public class PreviewSurfaceView extends SurfaceView implements SurfaceHolder.Cal
     parameters.setPreviewSize(preSize.width, preSize.height);
     parameters.setPictureSize(preSize.width, preSize.height);
     parameters.setJpegQuality(100);
-    mCamera.setParameters(parameters);
-    mCamera.startPreview();
+//    mCamera.setParameters(parameters);
+//    mCamera.startPreview();
   }
 
   public Camera.Size getCameraSize() {
