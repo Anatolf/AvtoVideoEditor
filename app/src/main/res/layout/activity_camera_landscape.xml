@@ -44,7 +44,7 @@
 
 
     <FrameLayout
-        android:id="@+id/wrap_view"
+        android:id="@+id/record_preview_layout"
         android:layout_width="0dp"
         android:layout_height="0dp" />
 

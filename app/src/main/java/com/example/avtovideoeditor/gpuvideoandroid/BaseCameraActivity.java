@@ -1,5 +1,6 @@
 package com.example.avtovideoeditor.gpuvideoandroid;
 
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
@@ -26,6 +27,9 @@ import com.daasuu.gpuv.camerarecorder.GPUCameraRecorderBuilder;
 import com.daasuu.gpuv.camerarecorder.LensFacing;
 import com.example.avtovideoeditor.R;
 import com.example.avtovideoeditor.gpuvideoandroid.widget.SampleCameraGLView;
+import com.iknow.android.interfaces.VideoTrimListener;
+import com.iknow.android.utils.ToastUtil;
+import com.iknow.android.widget.VideoTrimmerView;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -40,7 +44,7 @@ import javax.microedition.khronos.egl.EGL10;
 import javax.microedition.khronos.egl.EGLContext;
 import javax.microedition.khronos.opengles.GL10;
 
-public class BaseCameraActivity extends AppCompatActivity {
+public class BaseCameraActivity extends AppCompatActivity implements VideoTrimListener {
 
     private SampleCameraGLView sampleGLView;
     protected com.daasuu.gpuv.camerarecorder.GPUCameraRecorder GPUCameraRecorder;
@@ -51,16 +55,23 @@ public class BaseCameraActivity extends AppCompatActivity {
     protected int cameraHeight = 720;
     protected int videoWidth = 720;
     protected int videoHeight = 720;
-
     private boolean toggleClick = false;
 
+    private FrameLayout cameraPreviewLayout;
+    private VideoTrimmerView trimmerView;
+    private ProgressDialog mProgressDialog;
 
     private boolean recordState = false;
-
     private ListView effectsList;
+
 
     protected void onCreateActivity() {
         getSupportActionBar().hide();
+
+        //wrap_view
+        cameraPreviewLayout = findViewById(R.id.record_preview_layout);
+        trimmerView = findViewById(R.id.trimmer_view);
+
         recordBtn = findViewById(R.id.btn_record);
         recordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,11 +82,29 @@ public class BaseCameraActivity extends AppCompatActivity {
                     recordBtn.setText(getString(R.string.app_stop_record));
                     effectsList.setVisibility(View.GONE);
                     recordState = true;
+
+                    cameraPreviewLayout.setVisibility(View.VISIBLE);
+                    if (sampleGLView != null) {
+                        sampleGLView.setVisibility(View.VISIBLE);
+                        //cameraPreviewLayout.addView(sampleGLView);  // отобразить превью
+                    }
+                    trimmerView.setVisibility(View.GONE);
+
+
                 } else {
                     recordState = false;
                     GPUCameraRecorder.stop();
                     recordBtn.setText(getString(R.string.app_record));
                     effectsList.setVisibility(View.VISIBLE);
+
+                    sampleGLView.setVisibility(View.GONE);
+                    cameraPreviewLayout.setVisibility(View.GONE);
+                    cameraPreviewLayout.removeAllViews();
+                    trimmerView.setVisibility(View.VISIBLE);
+                    if (trimmerView != null) {
+                        trimmerView.setOnTrimVideoListener(BaseCameraActivity.this);
+                        trimmerView.initVideoByURI(Uri.parse(filepath));
+                    }
                 }
             }
         });
@@ -138,9 +167,7 @@ public class BaseCameraActivity extends AppCompatActivity {
             }
         });
 
-        getWindow().
-
-                setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
 
@@ -151,9 +178,26 @@ public class BaseCameraActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+        if (trimmerView != null) {
+            trimmerView.onVideoPause();
+            trimmerView.setRestoreState(true);
+        }
+    }
+
+    @Override
     protected void onStop() {
         super.onStop();
         releaseCamera();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (trimmerView != null) {
+            trimmerView.onDestroy();
+        }
     }
 
     private void releaseCamera() {
@@ -168,7 +212,7 @@ public class BaseCameraActivity extends AppCompatActivity {
         }
 
         if (sampleGLView != null) {
-            ((FrameLayout) findViewById(R.id.wrap_view)).removeView(sampleGLView);
+            ((FrameLayout) findViewById(R.id.record_preview_layout)).removeView(sampleGLView);
             sampleGLView = null;
         }
     }
@@ -178,8 +222,7 @@ public class BaseCameraActivity extends AppCompatActivity {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                FrameLayout frameLayout = findViewById(R.id.wrap_view);
-                frameLayout.removeAllViews();
+                cameraPreviewLayout.removeAllViews();
                 sampleGLView = null;
                 sampleGLView = new SampleCameraGLView(getApplicationContext());
                 sampleGLView.setTouchListener(new SampleCameraGLView.TouchListener() {
@@ -192,7 +235,7 @@ public class BaseCameraActivity extends AppCompatActivity {
                         GPUCameraRecorder.changeManualFocusPoint(event.getX(), event.getY(), width, height);
                     }
                 });
-                frameLayout.addView(sampleGLView);
+                cameraPreviewLayout.addView(sampleGLView);
             }
         });
     }
@@ -260,6 +303,46 @@ public class BaseCameraActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onStartTrim() {
+        buildDialog(getResources().getString(R.string.trimming)).show();
+    }
+
+    @Override
+    public void onFinishTrim(String in) {
+        if (mProgressDialog.isShowing()) mProgressDialog.dismiss();
+        ToastUtil.longShow(this, getString(R.string.trimmed_done));
+        finish();
+        //TODO: please handle your trimmed video url here!!!
+        //String out = StorageUtil.getCacheDir() + File.separator + COMPRESSED_VIDEO_FILE_NAME;
+        //buildDialog(getResources().getString(R.string.compressing)).show();
+        //VideoCompressor.compress(this, in, out, new VideoCompressListener() {
+        //  @Override public void onSuccess(String message) {
+        //  }
+        //
+        //  @Override public void onFailure(String message) {
+        //  }
+        //
+        //  @Override public void onFinish() {
+        //    if (mProgressDialog.isShowing()) mProgressDialog.dismiss();
+        //    finish();
+        //  }
+        //});
+    }
+
+    @Override
+    public void onCancel() {
+        trimmerView.onDestroy();
+        finish();
+    }
+
+    private ProgressDialog buildDialog(String msg) {
+        if (mProgressDialog == null) {
+            mProgressDialog = ProgressDialog.show(this, "", msg);
+        }
+        mProgressDialog.setMessage(msg);
+        return mProgressDialog;
+    }
 //    private void changeFilter(Filters filters) {
 //        GPUCameraRecorder.setFilter(Filters.getFilterInstance(filters, getApplicationContext()));
 //    }

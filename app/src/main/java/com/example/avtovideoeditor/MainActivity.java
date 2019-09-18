@@ -71,6 +71,7 @@ public class MainActivity extends Activity {
                     e.printStackTrace();
                 }
             }
+
             @Override
             public void surfaceDestroyed(SurfaceHolder holder) {
                 // do nothing
@@ -97,17 +98,18 @@ public class MainActivity extends Activity {
 //        startActivity(new Intent(this, MultipleCommandsExampleActivity.class));
 //    }
 
-    public void onClickRecord(View v){
+    public void onClickRecord(View v) {
         PortraitCameraActivity.startActivity(this);
     }
 
 
-//        public  void onClickTest2(View v){
+    //        public  void onClickTrim(View v){
 //        startActivity(new Intent(this, BPMCounterActivity.class));
 //    }
-public  void onClickTest2(View v){
-    startActivity(new Intent(this, VideoSelectActivity.class));
-}
+    public void onClickTrim(View v) {
+        //startActivity(new Intent(this, VideoSelectActivity.class));
+        startActivity(new Intent(this, VideoSelectActivity.class));
+    }
 
 
     public void onClickStartRecord(View view) {
