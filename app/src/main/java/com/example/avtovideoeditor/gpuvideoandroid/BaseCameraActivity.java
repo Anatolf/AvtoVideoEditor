@@ -54,7 +54,10 @@ public class BaseCameraActivity extends AppCompatActivity {
 
     private boolean toggleClick = false;
 
-    private ListView lv;
+
+    private boolean recordState = false;
+
+    private ListView effectsList;
 
     protected void onCreateActivity() {
         getSupportActionBar().hide();
@@ -62,15 +65,17 @@ public class BaseCameraActivity extends AppCompatActivity {
         recordBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (recordBtn.getText().equals(getString(R.string.app_record))) {
+                if (!recordState) {
                     filepath = getVideoFilePath();
                     GPUCameraRecorder.start(filepath);
-                    recordBtn.setText("Stop");
-                    lv.setVisibility(View.GONE);
+                    recordBtn.setText(getString(R.string.app_stop_record));
+                    effectsList.setVisibility(View.GONE);
+                    recordState = true;
                 } else {
+                    recordState = false;
                     GPUCameraRecorder.stop();
                     recordBtn.setText(getString(R.string.app_record));
-                    lv.setVisibility(View.VISIBLE);
+                    effectsList.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -120,11 +125,11 @@ public class BaseCameraActivity extends AppCompatActivity {
             }
         });
 
-        lv = findViewById(R.id.filter_list);
+        effectsList = findViewById(R.id.filter_list);
 
         final List<FilterType> filterTypes = FilterType.createFilterList();
-        lv.setAdapter(new FilterAdapter(this, R.layout.row_white_text, filterTypes).whiteMode());
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        effectsList.setAdapter(new FilterAdapter(this, R.layout.row_white_text, filterTypes).whiteMode());
+        effectsList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 if (GPUCameraRecorder != null) {
@@ -219,7 +224,7 @@ public class BaseCameraActivity extends AppCompatActivity {
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                lv.setVisibility(View.GONE);
+                                effectsList.setVisibility(View.GONE);
                             }
                         });
                     }

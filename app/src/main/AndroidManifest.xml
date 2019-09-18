@@ -51,8 +51,6 @@
             android:name="com.example.avtovideoeditor.gpuvideoandroid.LandscapeCameraActivity"
             android:screenOrientation="landscape" />
 
-        <activity android:name="com.example.avtovideoeditor.gpuvideoandroid.SquareCameraActivity" />
-
         <activity android:name="com.example.avtovideoeditor.gpuvideoandroid.Mp4ComposeActivity" />
 
         <activity

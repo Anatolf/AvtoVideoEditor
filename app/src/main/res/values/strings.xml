@@ -14,6 +14,7 @@
     <string name="play">play</string>
     <string name="pause">pause</string>
     <string name="app_record">Record Video</string>
+    <string name="app_stop_record">Stop</string>
 
 
     <string name="trimmed_done">video trim completed！</string>

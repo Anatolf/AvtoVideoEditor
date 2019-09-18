@@ -15,7 +15,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.avtovideoeditor.gpuvideoandroid.GpuActivity;
+import com.example.avtovideoeditor.gpuvideoandroid.PortraitCameraActivity;
 import com.iknow.android.features.select.VideoSelectActivity;
 
 
@@ -37,12 +37,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
 
 
-        startActivity(new Intent(this, VideoSelectActivity.class));
-        finish();
+        setContentView(R.layout.activity_main);
 
-        /*setContentView(R.layout.activity_main);
-
-        testButton = findViewById(R.id.testBtn);
+        testButton = findViewById(R.id.record_btn);
 
         picturesDir = Environment
                 .getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
@@ -78,7 +75,7 @@ public class MainActivity extends Activity {
             public void surfaceDestroyed(SurfaceHolder holder) {
                 // do nothing
             }
-        });*/
+        });
     }
 
     @Override
@@ -100,8 +97,8 @@ public class MainActivity extends Activity {
 //        startActivity(new Intent(this, MultipleCommandsExampleActivity.class));
 //    }
 
-    public void onClickPlayer (View v){
-        startActivity(new Intent(this, GpuActivity.class));
+    public void onClickRecord(View v){
+        PortraitCameraActivity.startActivity(this);
     }
 
 
